@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://eu73mfmyxn8u"]
+
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_0rf1u"]
+[ext_resource type="PackedScene" uid="uid://csnwybbgfpcse" path="res://Scenes/player.tscn" id="2_pgt8q"]
+[ext_resource type="PackedScene" uid="uid://wb038wawh22y" path="res://Scenes/enemy.tscn" id="4_ghgcs"]
+[ext_resource type="PackedScene" uid="uid://4gpa1wje6w8l" path="res://Scenes/hud.tscn" id="4_ho3cy"]
+[ext_resource type="PackedScene" uid="uid://copm84twlde6o" path="res://Scenes/diver.tscn" id="4_o2ptd"]
+[ext_resource type="Texture2D" uid="uid://be4yi5kfq5cij" path="res://icon.svg" id="4_vbq3f"]
+[ext_resource type="PackedScene" uid="uid://l7ia2h6dalv8" path="res://Scenes/game_over_screen.tscn" id="5_6lkwu"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ca2ca"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(912, 1, 1)
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = -1000.0
+initial_velocity_max = -1000.0
+gravity = Vector3(0, 0, 0)
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_0rf1u")
+enemy_scenes = Array[PackedScene]([ExtResource("4_ghgcs"), ExtResource("4_o2ptd")])
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Laser" type="AudioStreamPlayer3D" parent="SFX"]
+
+[node name="Hit" type="AudioStreamPlayer3D" parent="SFX"]
+
+[node name="Explode" type="AudioStreamPlayer3D" parent="SFX"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2736, 0)
+
+[node name="Space" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_repeat = 2
+rotation = 0.00111757
+texture = ExtResource("4_vbq3f")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 2736, 1824)
+
+[node name="Stars" type="GPUParticles2D" parent="."]
+position = Vector2(-50, 912)
+rotation = -1.5708
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_ca2ca")
+preprocess = 5.0
+
+[node name="UILAYER" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UILAYER" instance=ExtResource("4_ho3cy")]
+
+[node name="GameOverScreen" parent="UILAYER" instance=ExtResource("5_6lkwu")]
+visible = false
+
+[node name="Enemy_Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("2_pgt8q")]
+position = Vector2(2052, 912)
+scale = Vector2(1, 1)
+
+[node name="Spawn" type="Marker2D" parent="."]
+position = Vector2(2052, 912)
+
+[node name="Laser_Containment_Breach" type="Node2D" parent="."]
+
+[node name="Enemy_Container" type="Node2D" parent="."]
+
+[connection signal="timeout" from="Enemy_Timer" to="." method="_on_enemy_timer_timeout"]
