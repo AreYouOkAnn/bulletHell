@@ -2,7 +2,7 @@
 Laura: (Some people start the day with a coffee or a nice relaxing shower.)
 Laura: (Me? My days usually go something like this:)
 Laura: "FUCK!"
-//Laura shoots up out of bed, an alarm blares. 
+#[Laura shoots up out of bed, an alarm blares.]
 Laura: "Quinn is gonna be pissed."
 Cheese: "Meow."
 Laura: "Not now Cheese, I'm late."
@@ -18,7 +18,7 @@ Quinn: "Presentations today! You excited?"
 Laura: "You know that I'm not."
 Quinn: "Oh, come on! This is your chance to dazzle Carla with all your ~charts~ and ~graphs~."
 
-//Game starts
+#Game starts
 - Deny everything
 	Laura: "Whaaat? Why would I want to impress Carla?"
 	Quinn: "Oh, you mean other than your massive crush on her?"
@@ -28,32 +28,47 @@ Quinn: "Oh, come on! This is your chance to dazzle Carla with all your ~charts~ 
 Laura: "Uggh, is it that obvious?"
 Quinn: "To me? Yes. To her? Probably not."
 Laura: "Oh thank god."
-Quinn: "When are you gonna grow a backbone and finally ask her out?"
+Quinn: "When are you gonna grow a pair and ask her out?"
 
 - Defend your cowardice
-	Laura: "She's my coworker! That would be incredibly inappropriate."
-	Quinn: "Me and Mark are coworkers and we're consumate professionals."
+	Laura: "She's my coworker! That would be... inappropriate."
+	Quinn: "Me and Mark are coworkers and we're consummate professionals."
 	Laura: "You guys have been dating since high school! That's totally different."
 
 - Turn the tables
-	Laura: "I dunno, when are you gonna grow a backbone and tell Mark you don't like his haircut?"
-	Quinn: "That's not at all the same! Mark is a sweetie, if I tell him he looks like an ostrich, he'll never try anything new again."
+	Laura: "I dunno, when are you gonna grow a pair and tell Mark you don't like his haircut?"
+	Quinn: "That's not- you know that's not the same! Mark is a sweetie. If I tell him he looks like an ostrich, he'll never try anything new again!"
 	Laura: "So you're gonna keep lying to him?"
 	Quinn: "It's not a lie! It's a distilled version of the truth."
-	
+
+Quinn: "..."
+Laura: "..."	
 Quinn: "Whatever, you're just deflecting because you know I'm right."  
-//Game ends 
+#Game ends 
 
 => END
 
 ~ barista
 Barista: "Next!"
 Barista: "Welcome to the Coffee House, what can I getcha?"
-//Game starts
+#Game starts
 Laura: (Shit, what do I want?)
 Laura: (I could get what I always get... but that would be boring. But what if I get something new and I don't like it? Then that's a waste of money...)
 
+- Ask the barista for a reccomendation
+	Laura: "Is there anything that you would reccomend?"
+	Barista: "Sure! I always get the black tea myself, "
+	Laura: (Oh no I hate tea!)
+	Laura: (...but I did ask for the reccomendation. I don't want to be rude. What if I order something else and she thinks I'm rude?)
+	-Get the black tea
+	-Get something you actually like
+	
+- Try something new
+	Laura: "I think I'll get something new!"
+	Barista: "Alright, what can I getcha?"
+	Laura: (Shit, I didn't think this far ahead.)
 
+- Get the usual
 
 => END
 
