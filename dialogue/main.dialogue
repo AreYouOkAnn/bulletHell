@@ -1,74 +1,122 @@
 ~ tutorial
 Laura: (Some people start the day with a coffee or a nice relaxing shower.)
 Laura: (Me? My days usually go something like this:)
-Laura: "FUCK!"
+Laura: FUCK!
 #[Laura shoots up out of bed, an alarm blares.]
-Laura: "Quinn is gonna be pissed."
-Cheese: "Meow."
-Laura: "Not now Cheese, I'm late."
+Laura: Quinn is gonna be pissed.
+Cheese: Meow.
+Laura: Not now Cheese, I'm late.
 
 
 
 ~ bestie
-Quinn: "You're late!" 
-Laura: "It's 8:00 am!"
-Quinn: "On time is early, early is late, get in the car."
+Quinn: You're late! 
+Laura: It's 8:00 am!
+Quinn: On time is early, early is late, get in the car.
 
-Quinn: "Presentations today! You excited?" 
-Laura: "You know that I'm not."
-Quinn: "Oh, come on! This is your chance to dazzle Carla with all your ~charts~ and ~graphs~."
+#Laura gets in the car, Quinn starts driving
+Quinn: Presentations today! You excited? 
+Laura: You know that I'm not.
+Quinn: Oh, come on! This is your chance to dazzle Carla with all your ~charts~ and ~graphs~.
 
 #Game starts
 - Deny everything
-	Laura: "Whaaat? Why would I want to impress Carla?"
-	Quinn: "Oh, you mean other than your massive crush on her?"
+	Laura: Whaaat? Why would I want to impress Carla?
+	Quinn: Oh, you mean other than your massive crush on her?
 	Laura: (Shit.)
 
 - Confess
-Laura: "Uggh, is it that obvious?"
-Quinn: "To me? Yes. To her? Probably not."
-Laura: "Oh thank god."
-Quinn: "When are you gonna grow a pair and ask her out?"
+Laura: Uggh, is it that obvious?
+Quinn: To me? Yes. To her? Probably not.
+Laura: Oh thank god.
+Quinn: When are you gonna grow a pair and ask her out?
 
 - Defend your cowardice
-	Laura: "She's my coworker! That would be... inappropriate."
-	Quinn: "Me and Mark are coworkers and we're consummate professionals."
-	Laura: "You guys have been dating since high school! That's totally different."
+	Laura: She's my coworker! That would be... inappropriate.
+	Quinn: Me and Mark are coworkers and we're consummate professionals.
+	Laura: You guys have been dating since high school! That's totally different.
 
 - Turn the tables
-	Laura: "I dunno, when are you gonna grow a pair and tell Mark you don't like his haircut?"
-	Quinn: "That's not- you know that's not the same! Mark is a sweetie. If I tell him he looks like an ostrich, he'll never try anything new again!"
-	Laura: "So you're gonna keep lying to him?"
-	Quinn: "It's not a lie! It's a distilled version of the truth."
+	Laura: I dunno, when are you gonna grow a pair and tell Mark you don't like his haircut?
+	Quinn: That's not- you know that's not the same! Mark is a sweetie. If I tell him he looks like an ostrich, he'll never try anything new again!
+	Laura: So you're gonna keep lying to him?
+	Quinn: It's not a lie! It's a distilled version of the truth.
 
-Quinn: "..."
-Laura: "..."	
-Quinn: "Whatever, you're just deflecting because you know I'm right."  
 #Game ends 
+Quinn: ...
+Laura: ...	
+Quinn: Whatever, you're just deflecting because you know I'm right.  
 
 => END
 
 ~ barista
-Barista: "Next!"
-Barista: "Welcome to the Coffee House, what can I getcha?"
-#Game starts
+Barista: Next!
+Barista: Welcome to the Coffee House, what can I getcha?
 Laura: (Shit, what do I want?)
 Laura: (I could get what I always get... but that would be boring. But what if I get something new and I don't like it? Then that's a waste of money...)
 
-- Ask the barista for a reccomendation
-	Laura: "Is there anything that you would reccomend?"
-	Barista: "Sure! I always get the black tea myself, "
+#Game starts
+- Ask the barista for a recommendation
+	Laura: Is there anything that you would recommend?
+	Barista: Sure! I always get the black tea myself.
 	Laura: (Oh no I hate tea!)
-	Laura: (...but I did ask for the reccomendation. I don't want to be rude. What if I order something else and she thinks I'm rude?)
-	-Get the black tea
-	-Get something you actually like
+	Laura: (...but I did ask for the recommendation. I don't want to be rude. What if I order something else and she thinks I'm rude?)
+	- Get the black tea
+		Laura: Uhh, yeah... sure. I'll take the black tea.
+		Barista: Sounds good, one black tea coming up!
+		Laura: Thank you!
+		Laura: (... I think I'm a coward.)
+		set drink_status = "tea"
+	- Get something you actually like
+		Laura: Hmm, actually, can I get an iced latte?
+		Barista: No problem, one iced latte coming right up!
+		Laura: Thanks!
 	
 - Try something new
-	Laura: "I think I'll get something new!"
-	Barista: "Alright, what can I getcha?"
+	Laura: I think I'll get something new!
+	Barista: Alright, what can I getcha?
 	Laura: (Shit, I didn't think this far ahead.)
+	- Pick the first drink you see
+		Laura: Can I get the Green Drink?
+		Barista: No worries, one Green Drink coming up!
+		set drink_status = "green"
+	- Take your time to read the menu 
+		Laura: Actually, I'm not sure what I want yet. Is it okay if I let someone go in front while I choose?
+		Barista: No worries. 
+		set drink_status = "new"
 
 - Get the usual
+	Laura: Can I get an iced latte, please?
+	Barista: No worries, one iced latte coming up!
+	
+	#Time passes
+	Barista: Here you go.
+	Laura: (Oh, this isn't what I ordered at all. But she seems busy... maybe I should just take it?)
+	- Resign yourself to mystery drink
+	Laura: (Well, I guess this is my life now.)
+	set drink_status = "green"
+	- Ask for an iced latte
+	Laura: Excuse me. Sorry I think I got the wrong drink. 
+	Barista: Oh, my bad that must've been someone else's. Here's your drink. 
+
+#Game ends
+#Laura goes back to the car
+Quinn: Hey, what'd you get?
+if drink_status == "tea":
+	Laura: I got black tea.
+	Quinn: Wait, I thought you hated tea? 
+	Laura: ...yeah...
+elif drink_status == "green":
+	Laura: I'm... not really sure.
+	Quinn: It looks really... green.
+	Laura: Yeah it tastes really green too.
+elif drink_status == "new":
+	Laura: It's like a frappe, I think? Honestly, it's pretty good!
+	Quinn: Oooh, get me one of those next time. I love sugar. 
+else: 
+	Laura: Oh just the usual.
+	Quinn: Small iced latte, whole milk, 3 sugars?
+	Laura: Why mess with perfection?
 
 => END
 
