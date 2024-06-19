@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://wb038wawh22y" path="res://Scenes/enemy.tscn" id="4_ghgcs"]
 [ext_resource type="PackedScene" uid="uid://4gpa1wje6w8l" path="res://Scenes/hud.tscn" id="4_ho3cy"]
 [ext_resource type="PackedScene" uid="uid://copm84twlde6o" path="res://Scenes/diver.tscn" id="4_o2ptd"]
-[ext_resource type="Texture2D" uid="uid://be4yi5kfq5cij" path="res://icon.svg" id="4_vbq3f"]
+[ext_resource type="Texture2D" uid="uid://be4yi5kfq5cij" path="res://art/other/icon.svg" id="4_vbq3f"]
 [ext_resource type="PackedScene" uid="uid://l7ia2h6dalv8" path="res://Scenes/game_over_screen.tscn" id="5_6lkwu"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ca2ca"]
