@@ -12,12 +12,13 @@ config_version=5
 
 config/name="Shooter"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://art/other/icon.svg"
 
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 State="*res://Scripts/state.gd"
+GameManager="*res://Scripts/GameManager.gd"
 
 [dialogue_manager]
 
