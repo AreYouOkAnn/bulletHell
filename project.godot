@@ -22,6 +22,7 @@ State="*res://Scripts/state.gd"
 [dialogue_manager]
 
 general/states=["State"]
+general/balloon_path="res://dialogue/balloon.tscn"
 
 [display]
 
