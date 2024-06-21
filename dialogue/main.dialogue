@@ -121,8 +121,101 @@ else:
 => END
 
 ~ elevator
+Quinn: See you at the meeting.
+Laura: Later.
 
+#Laura gets in the elevator and hits the button to the 15th floor.
+???: Hold the elevator!
+Laura: [Hits the door open button.]
+#A man barrels through the doors of the elevator.
+???: Thanks!
+Laura: No worries.
+???: I don't think we've met. I'm Jeremy.
 
+#Game starts
+Laura: (Oh god, I hate small talk.)
+
+- Pretend you didn't hear him
+	Laura: (Maybe if pretend I'm listening to music, he'll leave me alone.)
+	Laura: ...
+	Jeremy: What's your name?
+	Laura: (Oh no, he's persistent.)
+
+- Make polite small talk
+Laura: Oh, I'm Laura.
+Jeremy: Laura, nice to meet you. That's a beautiful name.
+Laura: (Oh no, oh no, oh no.)
+Laura: (He's not flirting with me, he can not be flirting with me.)
+- Blurt out that you're a lesbian
+	Laura: I'm a lesbian!
+	Jeremy: Oh... that's cool...
+	Laura: ...
+	Jeremy: ...
+	Laura: (I'm going to die. This is what dying feels like.)
+	Jeremy: ... my sister's a lesbian.
+	Laura: (I hate this. I hate this so much.)
+	- Make an awkward joke
+		Laura: So... is she single?
+		Jeremy: Umm, no she's married.
+		Laura: (Shit he thinks I was serious!)
+		- Try to explain that you were making a joke
+			Laura: No, I'm not- I was joking.
+			Jeremy: About being a lesbian?
+			Laura: No that part is real. I meant umm... about dating your... sister.
+			Jeremy: Oh.
+			Laura: Yeah...
+		- Take the L 
+			Laura: (Ugh, if I backtrack now, he's gonna think I just took it back because she's not single.)
+			Laura: ...
+			Jeremy: ...
+			Laura: ...
+			Laura: (Oh thank god, finally.)
+
+	- Perform a heroic act of social suave
+		Laura: Ha! Maybe we know each other.
+		Jeremy: ... sorry, that was stupid.
+		Laura: Only a little bit.
+		Jeremy: ... want to pretend this conversation never happened?
+		Laura: Desperately.
+
+- Thank him for the complement
+	Laura: Thanks, I got it from my parents.
+	Jeremy: Ha, she's funny too!  
+	Jeremy: ... hey, this might be a little crazy but... are you doing anything this weekend?
+	- Lie and say you have plans
+		Laura: Yes! I'm actually super super busy this weekend!
+		Jeremy: Oh... what about next weekend?
+		Laura: (Shit.)
+	- Let him down gently
+		Laura: Hey Jeremy. You seem nice, but I'm not really interested in men. Sorry.
+		Jeremy: Oh, yeah no totally... that's cool.
+
+	Laura: So! Have you worked here for long?
+	Jeremy: Umm, no not really, this is my 3rd week or so. 
+	Laura: Oh, welcome!
+	Jeremy: Thanks!
+	Laura: ...
+	Jeremy: ...
+	Laura: (This elevator ride is eternal.)
+	- Just deal with the uncomfortable silence
+		Laura: ...
+		Jeremy: ...
+		Laura: ...
+		Jeremy: Achoo!
+		Laura: Bless you.
+		Jeremy: Thanks.
+		Laura: ...
+		Jeremy: ...
+		Laura: (Oh thank god we're here.)
+	- 	Try to get off on an earlier floor
+		Jeremy: Oh, are you changing your floor?
+		Laura: Yeah, I accidentally hit the wrong button, hahaha!
+		Jeremy: Right...
+		Laura: See you around!
+		Laura: (Freedom!)
+
+#Game ends
+Laura: Maybe I should just take the stairs from now on.
 ~ presentation
 
 

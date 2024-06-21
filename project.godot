@@ -23,6 +23,7 @@ GameManager="*res://Scripts/GameManager.gd"
 [dialogue_manager]
 
 general/states=["State"]
+general/balloon_path="res://dialogue/balloon.tscn"
 
 [display]
 
