@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://csnwybbgfpcse"]
+[gd_scene load_steps=4 format=3 uid="uid://csnwybbgfpcse"]
 
-[ext_resource type="Texture2D" uid="uid://dtf7rqr3ou0ab" path="res://PNG/Sprites/Ships/spaceShips_003.png" id="1_lcvv0"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_omccx"]
+[ext_resource type="Texture2D" uid="uid://bpm2bvmvdr4me" path="res://art/other/player.png" id="2_nae3t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0aooo"]
+radius = 45.3766
 
 [node name="Player" type="CharacterBody2D"]
 rotation = -1.57079
@@ -11,10 +14,12 @@ motion_mode = 1
 script = ExtResource("1_omccx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_lcvv0")
+rotation = 1.57079
+texture = ExtResource("2_nae3t")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(14, -32, 33, -44, 50, -43, 31, 27, 19, 27, 14, 44, -13, 44, -19, 29, -31, 28, -51, -43, -32, -43, -15, -32)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_0aooo")
 
 [node name="Muzzle" type="Marker2D" parent="."]
 position = Vector2(0, -38)

@@ -32,6 +32,7 @@ enemy_scenes = Array[PackedScene]([ExtResource("4_ghgcs"), ExtResource("4_o2ptd"
 [node name="Explode" type="AudioStreamPlayer3D" parent="SFX"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(2736, 0)
@@ -45,6 +46,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 2736, 1824)
 
 [node name="Stars" type="GPUParticles2D" parent="."]
+visible = false
 position = Vector2(-50, 912)
 rotation = -1.5708
 amount = 50
